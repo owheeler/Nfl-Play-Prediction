@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+   <body>
+      <h1>NFL Run Pass Prediction!</h1>
+
+<div>
+<form action="/result" method="POST">
+  <fieldset>    
+        <legend><strong>Game Information</strong></legend>
+        
+        <input type="radio" name="HomeGame" value=1 {% if HomeGame == '1' %} checked {% endif %}> Home   
+        <input type="radio" name="HomeGame" value=0 {% if HomeGame == '0' %} checked {% endif %}> Away<br><br>
+        Team Score:      
+        <input type="text" name="TeamScore" value= {{ TeamScore }}><br>
+        Opponent Score: 
+        <input type="text" name="OppScore" value= {{ OppScore }}>
+    <br><br>
+
+    
+        Quarter:<br>
+        <input type="radio" name="Quarter" value=1 {% if Quarter == '1' %} checked {% endif %}> 1st   
+        <input type="radio" name="Quarter" value=2 {% if Quarter == '2' %} checked {% endif %}> 2nd   
+        <input type="radio" name="Quarter" value=3 {% if Quarter == '3' %} checked {% endif %}> 3rd 
+        <input type="radio" name="Quarter" value=4 {% if Quarter == '4' %} checked {% endif %}> 4th<br><br>
+        
+        Time in Quarter (MM:SS):<br>
+        <input type="text" name="Time" value= {{ Time }}>
+    <br><br>
+
+    
+        Side of the Field:<br>
+        <input type="radio" name="Side" value=50 {% if Side == '50' %} checked {% endif %}> Own 
+        <input type="radio" name="Side" value=0{% if Side == '0' %} checked {% endif %}> Opponent 
+        <input type="radio" name="Side" value=0> 50 Yard Line<br><br>
+
+        Yard Line:<br>
+        <input type="text" name="YardLine" value= {{ YardLine }}> <br><br>
+
+        Down:<br>
+        <input type="radio" name="Down" value=1 {% if Down == '1' %} checked {% endif %}> 1st   
+        <input type="radio" name="Down" value=2 {% if Down == '2' %} checked {% endif %}> 2nd   
+        <input type="radio" name="Down" value=3 {% if Down == '3' %} checked {% endif %}> 3rd<br><br>
+
+        Distance:<br>
+        <input type="text" name="Distance" value= {{ Distance}} >
+    
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  </form>
+</div>
+<br>
+<fieldset><legend>Results</legend><h2> Prediction: {{ prediction }}</h2>
+  <h3> Probability of a pass: {{ passProb }}% </h3>
+</fieldset>
+<br>
+<p>Source code files availble on my <a href="https://github.com/owheeler/Nfl-Play-Prediction">github.</a></p>
+   </body>
+</html>

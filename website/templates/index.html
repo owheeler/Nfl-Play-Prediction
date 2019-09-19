@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <body>
+    <h1> NFL Run Pass Prediction!</h1>
+
+<div>
+<form action="/result" method="POST">
+  <fieldset>
+    <legend><strong>Game Information</strong></legend>
+
+        <input type="radio" name="HomeGame" value=1 checked> Home   
+        <input type="radio" name="HomeGame" value=0> Away<br><br>
+        Team Score:      
+        <input type="text" name="TeamScore" value=0><br>
+        Opponent Score: 
+        <input type="text" name="OppScore" value=0>
+    <br><br>
+
+        Quarter:<br>
+        <input type="radio" name="Quarter" value=1 checked> 1st   
+        <input type="radio" name="Quarter" value=2> 2nd   
+        <input type="radio" name="Quarter" value=3> 3rd 
+        <input type="radio" name="Quarter" value=4> 4th
+        <br><br>
+        
+        Time in Quarter (MM:SS):<br>
+        <input type="text" name="Time" value="15:00">
+    <br><br>
+
+    
+        Side of the Field:<br>
+        <input type="radio" name="Side" value=50 checked> Own 
+        <input type="radio" name="Side" value=0> Opponent 
+        <input type="radio" name="Side" value=0> 50 Yard Line<br><br>
+
+        Yard Line:<br>
+        <input type="text" name="YardLine" value=0><br><br>
+
+        Down:<br>
+        <input type="radio" name="Down" value=1 checked> 1st   
+        <input type="radio" name="Down" value=2> 2nd   
+        <input type="radio" name="Down" value=3> 3rd<br><br>
+
+        Distance:<br>
+        <input type="text" name="Distance" value=10>
+    
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  </form>
+</div><br>
+
+<p>Source code files availble on my <a href="https://github.com/owheeler/Nfl-Play-Prediction">github.</a></p>
+   
+</body>
+</html>
